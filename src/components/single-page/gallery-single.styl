@@ -1,0 +1,97 @@
+@import "../stylesheet-options"
+
+.gallery-single
+  padding: rem(0 80px)
+
+  @media (max-width: 800px)
+    padding: rem(0 20px)
+
+.gallery-single__slider-wrapper-block
+  /*background: #000*/
+  margin: auto
+  margin-bottom: rem(50px)
+  position: relative
+  max-width: rem(1280px)
+
+  &--full
+    max-width: 100%
+
+    img
+      width: 100%
+
+.gallery-single__slider-block
+  position: relative
+  overflow: hidden
+  margin: auto
+
+.gallery-single__container-wrapper
+  margin: auto
+  max-width: rem(1440px)
+
+.gallery-single__container
+  max-width: rem(790px)
+  padding: rem(15px)
+
+  @media (max-width: 600px)
+    padding: rem(15px 0)
+
+.gallery-single__title
+  @extend $single-page-title
+  font-size: rem(75px)
+  line-height: 1.1
+  margin-top: rem(48px)
+  margin-bottom: rem(10px)
+
+  @media (max-width: 600px)
+    margin-top: rem(120px)
+    font-size: rem(50px)
+
+.gallery-single__preview
+  @extend $single-page-preview
+  margin-bottom: rem(30px)
+
+.gallery-single__date
+  @extend $single-page-meta
+  margin-bottom: rem(40px)
+
+.gallery-single__content
+  @extend $single-page-content
+
+  @media (max-width: 768px)
+    padding: 0
+
+.gallery-single__next
+  margin-top: rem(136px)
+
+.gallery-single__next-text
+  font-family: 'SackersGothicW01-Medium', serif
+  font-size: rem(12px)
+  color: #757474
+  text-transform: uppercase
+  margin-bottom: rem(23px)
+
+.gallery-single__next-link
+  text-decoration: none
+
+.gallery-single__next-title
+  @extend $home-sections-title
+  display: block
+  margin-top: 0
+
+.gallery-single__next-preview
+  @extend $home-sections-text
+  margin-bottom: rem(26px)
+
+.gallery-single__next-img
+  max-width: rem(360px)
+  margin-bottom: rem(36px)
+  max-height: rem(238px)
+  overflow: hidden
+  display: flex
+  align-items: center
+
+  img
+    flex: 0 0 100%
+
+.gallery-single__next-date
+  @extend .gallery-single__date

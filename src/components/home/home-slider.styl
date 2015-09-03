@@ -1,0 +1,152 @@
+@import "../stylesheet-options"
+
+.home-slider
+  position: relative
+  overflow: hidden
+
+.home-slider__wrapper
+  position: fixed
+  min-width: rem(768px)
+  top: 0
+  left: 0
+  width: 100%
+  /*min-width: rem(1220px)*/
+  z-index: 3
+
+  .base--mobile &
+    position: absolute !important
+    min-width: 0
+
+.home-slider__item
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 1
+
+.home-slider__video-type
+  height: 100%
+
+.home-slider__video-item
+  position: absolute
+  right: 0
+  bottom: 0
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  z-index: 0
+
+.home-slider__image
+  @extend .home-slider__item
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  transition: transform .3s ease-out
+  z-index: 0
+
+.home-slider__content
+  position: absolute
+  top: rem(120px)
+  left: rem(60px)
+
+  @media (max-width: 600px)
+    top: rem(60px)
+    left: rem(30px)
+    max-width: rem(500px)
+    width: 100%
+    padding-right: rem(60px)
+
+  &--left
+    text-align: left
+
+  &--center
+    @media (max-width: 600px)
+      left: 50%
+      margin-left: -(rem(550px / 2))
+      text-align: center
+
+  &--right
+    @media (max-width: 600px)
+      left: auto
+      right: rem(60px)
+      text-align: right
+
+.home-slider__category
+  font-size: rem(12px)
+  font-family: 'SackersGothicW01-Medium', serif
+  text-transform: uppercase
+  margin-bottom: rem(10px)
+  display: block
+  text-decoration: none
+  width: rem(550px)
+
+  @media (max-width: 768px)
+    font-size: rem(10px)
+
+.home-slider__title
+  font-size: rem(50px)
+  font-family: 'IdealSans-ExtraLight', sans-serif
+  margin-bottom: rem(12px)
+  text-decoration: none
+  display: block
+
+  @media (max-width: 768px)
+    font-size: rem(32px)
+
+  @media (min-width: 1600px)
+    font-size: rem(70px)
+
+.home-slider__text
+  font-size: rem(25px)
+  font-family: 'IdealSans-ExtraLight', sans-serif
+  margin-bottom: rem(32px)
+  max-width: rem(550px)
+
+  @media (max-width: 768px)
+    font-size: rem(20px)
+
+.home-slider__bottom-text
+  font-size: rem(18px)
+  max-width: rem(550px)
+
+.home-slider__link
+  font-size: rem(22px)
+  text-decoration: none
+  margin-top: rem(60px)
+  display: inline-block
+  max-width: rem(550px)
+
+  @media (max-width: 768px)
+    font-size: rem(18px)
+
+.home-slider__bullets
+  position: absolute
+  bottom: rem(15px)
+  right: rem(15px)
+  z-index: 10
+
+.home-slider__bullet
+  @extend $inline-block
+  margin: rem(0 4px)
+  background: #8f8e8a
+  width: rem(6px)
+  height: @width
+  border-radius: 50%
+  transition: background 2s
+  cursor: pointer
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    top: rem(-5px)
+    left: rem(-5px)
+    bottom: 0
+    right: 0
+    padding: rem(8px)
+
+  &--active
+    background: #fff

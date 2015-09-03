@@ -1,0 +1,13 @@
+@import "../stylesheet-options"
+
+.phhhoto-preview
+  @extend $inline-block
+  width: (100 / 7)%
+  padding-right: rem(5px)
+  margin-bottom: rem(5px)
+
+  &:nth-child(7n)
+    padding-right: 0
+
+.phhhoto-preview__img
+  previewImage(rem(225px))

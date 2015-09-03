@@ -1,0 +1,75 @@
+@import "../stylesheet-options"
+/*@import "../fonts/SackersGothicW01-Medium/styles.css"*/
+/*@import "../fonts/IdealSans-Light/styles.css"*/
+/*@import "../fonts/IdealSans-ExtraLight/styles.css"*/
+/*@import "../fonts/HiraKakuPro-W3-AlphaNum/styles.css"*/
+/*@import "../fonts/IdealSans-Thin/styles.css"*/
+
+*
+  box-sizing: border-box
+
+html
+  font-size: base-font-size
+
+body
+  font-family: 'IdealSans-Light', sans-serif
+  margin: 0
+  -webkit-font-smoothing: antialiased
+  /*min-width: rem(1220px)*/
+
+img
+  max-width: 100%
+  height: auto
+
+iframe
+  border: 0
+
+html, body, #app, .base
+  height: 100%
+
+.base
+  min-width: rem(768px)
+
+.base--mobile
+  min-width: 0
+
+.base__content
+  min-height: 100%
+  overflow: hidden
+
+.overlay
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: #000
+  opacity: 0
+  z-index: -1
+  transition: opacity .3s ease-out, z-index .5s
+
+  &--active
+    opacity: 1
+    z-index: 9998
+    transition: opacity .3s ease-out
+
+  &--white
+    background: white
+
+
+.read-more
+  font-size: rem(22px)
+  color: #4a4a4a
+  display: block
+  text-decoration: none
+
+  &:after
+    content: ''
+    display: inline-block
+    margin-left: rem(20px)
+    position: relative
+    width: rem(8px)
+    height: rem(14px)
+    background: url('../images/next-darker.png') no-repeat center
+    background-size: 100% 100%
+    top: rem(1px)

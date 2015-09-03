@@ -1,0 +1,83 @@
+@import "../stylesheet-options"
+
+.search-input
+  float: right
+  height: rem(48px)
+
+.search-input__icon
+  display: inline-block
+  vertical-align: middle
+  background: url(../images/Search.svg) no-repeat center
+  width: rem(16px)
+  height: rem(48px)
+  cursor: pointer
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    top: 0
+    left: rem(-24px)
+    width: rem(48px)
+    height: rem(48px)
+
+
+.search-input__block
+  visibility: hidden
+  text-align: center
+  background: #fff
+  opacity: 0
+  position: fixed
+  z-index: 9999
+  top: 0
+  left: 0
+  width: 100%
+  height: rem(490px)
+  transition: opacity .3s ease-out, visibility .3s ease-out
+
+  .base--mobile &
+    position: absolute
+
+  &--active
+    visibility: visible
+    opacity: 1
+    transition: opacity .3s ease-out
+
+.search-input__close
+  display: block
+  width: rem(34px)
+  height: @width
+  background: url(../images/close.png) no-repeat center
+  position: absolute
+  top: rem(35px)
+  left: rem(30px)
+  cursor: pointer
+  
+.search-input__input
+  margin-top: rem(200px)
+  padding: rem(0 6px)
+  width: 100%
+  max-width: rem(200px)
+  font-size: rem(72px)
+  font-family: 'IdealSans-Thin', sans-serif
+  border: 0
+  padding: 0
+  outline: 0
+
+  @media (max-width: 768px)
+    font-size: rem(56px)
+    max-width: rem(155px)
+
+  &--active
+    text-align: center
+    max-width: 100%
+
+  &::placeholder
+    color: #4a4a4a
+
+.search-input__text
+  margin-top: rem(22px)
+  background: url(../images/WestonJamesPalmer_no_copy.svg) no-repeat center
+  background-size: 100% 6px
+  height: rem(8px)

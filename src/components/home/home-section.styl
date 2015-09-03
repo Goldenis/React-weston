@@ -1,0 +1,26 @@
+@import "../stylesheet-options"
+
+.home-section
+  margin-bottom: rem(80px)
+
+  @media (max-width: 900px)
+    margin-bottom: rem(140px)
+
+.home-section__title
+  margin: rem(20px 16px)
+  font-size: rem(12px)
+  font-family: 'SackersGothicW01-Medium', serif
+  color: #4a4a4a
+  font-weight: bold
+  text-transform: uppercase
+
+  &--no-margin
+    margin: (20px 0)
+
+.home-section__title-link
+  color: #4a4a4a
+  text-decoration: none
+
+.home-section__items
+  @extend $clearfix
+  overflow: hidden

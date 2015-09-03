@@ -1,0 +1,101 @@
+@import "../stylesheet-options.styl"
+
+.pages
+  position: relative
+  padding-bottom: rem(100px)
+
+  &--stopped
+    padding-bottom: 0
+
+.pages__category
+  text-align: center
+  padding: rem(170px 20px 155px)
+
+  img
+    display: block
+    margin: auto
+
+.pages__category-wrapper
+  position: relative
+
+.pages__category-image
+  position: relative
+  z-index: 1
+  box-shadow: 0 0 0 rem(5px) white
+
+.pages__category-image-wrapper
+  max-height: rem(220px)
+  max-width: rem(600px)
+  overflow: hidden
+  position: relative
+  margin: auto
+  cursor: pointer
+
+.pages__category-image-background
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+
+.pages__category-text
+  background: url(../images/WestonJamesPalmer_no_copy.svg) no-repeat center
+  background-size: 100% 6px
+  height: rem(8px)
+  position: absolute
+  z-index: 2
+  /*margin-top: rem(34px)*/
+  bottom: -(rem(2px))
+  width: 100%
+
+  &--extra
+    bottom: -(rem(14))
+
+.pages__stories-row
+  margin-bottom: rem(90px)
+
+  @media (max-width: 1030px)
+    margin-bottom: 0
+
+  .base--mobile &
+    @media (max-width: 510px)
+      margin-bottom: 0
+
+.pages__gallery-row
+  margin-bottom: rem(70px)
+
+  @media (max-width: 900px)
+    margin-bottom: 0
+
+.pages__phhhoto-wrapper, .pages__instagram-wrapper
+  max-width: rem(1220px)
+  margin: auto
+
+.pages__content
+  @extend $clearfix
+  overflow: hidden
+  max-width: rem(1440px)
+  margin: auto
+
+  &--tiny
+    max-width: rem(1220px)
+
+.pages__loading
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: rem(50px)
+  background: url(../images/wheel.jpg) no-repeat center
+  background-size: auto 100%
+  animation: spin 1s linear infinite
+  margin: auto
+  opacity: 0
+
+  &--active
+    opacity: 1
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)

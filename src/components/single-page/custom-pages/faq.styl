@@ -1,0 +1,57 @@
+@import "../../stylesheet-options"
+
+.faq-page
+  max-width: rem(1280px)
+  margin: auto
+
+.faq-page__header
+  max-width: rem(1070px)
+  margin: auto
+  padding: rem(0 10px)
+
+.faq-page__title
+  color: #333336
+  font-size: rem(160px)
+  font-family: 'IdealSans-ExtraLight', sans-serif
+  font-weight: normal
+  margin: 0
+  margin-bottom: rem(60px)
+  line-height: 1.1
+
+  @media (max-width: 768px)
+    text-align: center
+    font-size: rem(80px)
+
+.faq-page__description
+  font-size: rem(25px)
+  color: #767675
+  font-family: 'IdealSans-ExtraLight', sans-serif
+  margin-bottom: rem(50px)
+
+.faq-page__image
+  margin-bottom: rem(50px)
+
+  img
+    display: block
+    margin: auto
+
+.faq-page__faqs
+  @media (max-width: 768px)
+    padding: rem(0 10px)
+
+.faq-page__faqs-block
+  font-size: rem(21px)
+  color: #333333
+  display: inline-block
+  vertical-align: top
+  width: 48%
+  font-family: 'FreightTextBook', sans-serif
+  line-height: rem(31px)
+  margin-bottom: rem(25px)
+
+  &:nth-child(odd)
+    margin-right: 2%
+
+  @media (max-width: 600px)
+    width: 100%
+    margin-right: 0 !important

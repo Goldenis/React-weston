@@ -1,0 +1,97 @@
+@import "../stylesheet-options"
+
+.story-single__header
+  padding: rem(0 20px)
+  margin: auto
+
+.story-single__title
+  @extend $single-page-title
+  font-size: rem(95px)
+  line-height: rem(100px)
+  /*max-width: rem(1080px)*/
+  /*margin: auto*/
+  margin-bottom: rem(24px)
+
+  @media (max-width: 600px)
+    font-size: rem(50px)
+    line-height: 1.1
+
+.story-single__preview
+  @extend $single-page-preview
+  max-width: rem(1080px)
+  margin: auto
+  margin-bottom: rem(38px)
+
+.story-single__author
+  @extend $single-page-meta
+  max-width: rem(1080px)
+  margin: auto
+  margin-bottom: rem(90px)
+
+.story-single__img
+  padding: rem(0 80px)
+  margin: auto
+  text-align: center
+  /*margin-top: rem(158px)*/
+  margin-bottom: rem(88px)
+
+  @media (max-width: 600px)
+    margin: rem(80px auto)
+    padding: 0
+
+.story-single__content
+  @extend $single-page-content
+  margin: auto
+  margin-bottom: rem(70px)
+
+  p
+    max-width: rem(700px)
+    margin-left: auto
+    margin-right: auto
+
+.story-single__next
+  padding: rem(0 16px)
+  margin-top: rem(156px)
+
+.story-single__next-text
+  font-family: 'SackersGothicW01-Medium', serif
+  font-size: rem(12px)
+  color: #757474
+  text-align: center
+  text-transform: uppercase
+  margin-bottom: rem(28px)
+
+.story-single__next-link
+  text-decoration: none
+
+.story-single__next-title
+  @extend $home-sections-title
+  font-size: rem(50px)
+  font-family: 'IdealSans-ExtraLight', sans-serif
+  font-weight: normal
+  display: block
+  line-height: 1.1
+  text-align: center
+  margin-bottom: rem(16px)
+
+.story-single__next-preview
+  @extend $home-sections-text
+  margin-bottom: rem(28px)
+  text-align: center
+
+.story-single__next-author
+  @extend .story-single__author
+  margin-bottom: rem(64px)
+  text-align: center
+
+.story-single__next-img
+  max-width: rem(360px)
+  margin auto
+  text-align: center
+  display: flex
+  align-items: center
+  max-height: rem(238px)
+  overflow: hidden
+
+  img
+    flex: 0 0 100%

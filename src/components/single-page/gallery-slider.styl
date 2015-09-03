@@ -1,0 +1,64 @@
+@import "../stylesheet-options"
+
+/*.gallery-slider*/
+  /*position: relative*/
+  /*height: rem(720px)*/
+  /*max-width: rem(1280px)*/
+  /*margin: auto*/
+  /*margin-bottom: rem(50px)*/
+
+.gallery-slider__content
+  white-space: nowrap
+
+.gallery-slider__item
+  position: relative
+  top: 0
+  left: 0
+  margin: auto
+  display: block
+  width: 100%
+
+  img
+    display: block
+    margin: auto
+
+  .gallery-single__slider-block--full &
+    width: 100%
+  /*background-size: cover*/
+  /*background-position: center*/
+  /*background-repeat: no-repeat*/
+
+.gallery-slider__bullets
+  position: absolute
+  bottom: rem(15px)
+  right: rem(15px)
+  z-index: 10
+  transition: bottom .3s ease-out
+
+.gallery-slider__bullet
+  @extend $inline-block
+  margin: rem(0 4px)
+  background: #8f8e8a
+  width: rem(6px)
+  height: @width
+  border-radius: 50%
+  transition: background 2s
+  cursor: pointer
+
+  &--active
+    background: #fff
+
+.gallery-single__audio
+  background: url(../images/volume.svg) no-repeat center
+  width: rem(16px)
+  height: rem(16px)
+  cursor: pointer
+  margin: auto
+  margin-top: rem(80px)
+  opacity: .5
+
+  @media (min-width: 600px)
+    display: none
+
+  &--active
+    opacity: 1

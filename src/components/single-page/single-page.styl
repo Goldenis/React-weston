@@ -1,0 +1,102 @@
+@import "../stylesheet-options"
+
+.single-page
+  padding-bottom: rem(100px)
+
+.single-page__header
+  position: relative
+  padding: rem(34px 32px)
+  min-height: rem(130px)
+
+.single-page__close
+  float: left
+  background: url('../images/close.png') no-repeat
+  width: rem(34px)
+  height: rem(34px)
+  cursor: pointer
+
+.single-page__wjp
+  background: url(../images/WestonJamesPalmer_no_copy.svg) no-repeat center
+  background-size: 100% 6px
+  height: rem(8px)
+  position: absolute
+  width: rem(140px)
+  margin-left: rem(-70px)
+  left: 50%
+  top: rem(50px)
+
+.single-page__views
+  float: right
+  margin-right: rem(30px)
+  margin-top: rem(6px)
+
+  @media (max-width: 600px)
+    display: none
+
+.single-page__views-count
+  display: inline-block
+  vertical-align: middle
+  margin-right: rem(16px)
+  font-size: rem(10px)
+  color: #7c7c7c
+  font-family: 'SackersGothicW01-Medium', serif
+
+.single-page__views-icon
+  background: url(../images/eye.png) no-repeat center
+  width: rem(20px)
+  height: rem(11px)
+  display: inline-block
+  vertical-align: middle
+
+.single-page__arrows
+  display: inline-block
+  vertical-align: middle
+  float: right
+
+.single-page__prev
+  display: inline-block
+  vertical-align: middle
+  background: url('../images/prev.png') no-repeat
+  width: rem(18px)
+  height: rem(34px)
+  margin-right: rem(18px)
+
+.single-page__next
+  display: inline-block
+  vertical-align: middle
+  background: url('../images/next.png') no-repeat
+  width: rem(18px)
+  height: rem(34px)
+
+.single-page__content
+  /*max-width: rem(1440px)*/
+  margin: auto
+
+  &--tiny
+    max-width: rem(1220px)
+
+.single-page__audio
+  visibility: hidden
+
+.single-page__volume
+  background: url(../images/volume.svg) no-repeat center
+  width: rem(16px)
+  height: rem(16px)
+  float: right
+  cursor: pointer
+  margin-top: rem(8px)
+  margin-right: rem(30px)
+
+  @media (max-width: 600px)
+    display: none
+
+.single-page__volume--muted
+  opacity: .3
+
+.single-page__comments
+  margin-top: rem(50px)
+  padding: rem(0 20px)
+
+.single-page__comments-inner
+  max-width: rem(1000px)
+  margin: auto

@@ -1,0 +1,71 @@
+@import "../stylesheet-options"
+
+.boutique-preview
+  @extend $inline-block
+  width: (100 / 3)%
+  padding-right: rem(5px)
+  margin: rem(0 auto 40px)
+  text-decoration: none
+  overflow: hidden
+
+  &:nth-child(3n)
+    padding-right: 0
+
+  .base--mobile &
+    @media (max-width: 768px)
+      width: 100%
+      padding-right: 0
+
+    /*@media (min-width: 600px) and (max-width: 768px)*/
+      /*width: 50%*/
+
+      /*&:nth-child(2)*/
+        /*padding-right: 0*/
+
+      /*&:nth-child(3)*/
+        /*width: 100%*/
+        /*display: block*/
+        /*margin: auto*/
+        /*max-width: rem(600px)*/
+
+    /*@media (max-width: 600px)*/
+      /*width: 100%*/
+      /*display: block*/
+      /*padding-right: 0*/
+
+.boutique-preview__img
+  /*previewImage(rem(270px))*/
+  max-height: rem(320px)
+  overflow: hidden
+  margin-left: rem(-5px)
+
+  @media (max-width: 768px)
+    background: #f1f1f1
+    margin-left: 0
+
+    img
+      margin-left: auto !important
+      margin-right: auto !important
+
+  .boutique-preview:nth-child(3) &
+    margin-left: 0
+
+    img
+      margin-right: 0
+
+  img
+    display: block
+    margin: auto
+    margin-right: rem(-5px)
+
+.boutique-preview__content
+  max-width: rem(350px)
+  margin: auto
+  padding: rem(0 10px)
+  text-align: center
+
+.boutique-preview__title
+  @extend $home-sections-title
+
+.boutique-preview__text
+  @extend $home-sections-text

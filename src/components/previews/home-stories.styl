@@ -1,0 +1,61 @@
+@import "../stylesheet-options"
+
+.home-stories
+  
+  width: 100%
+  padding-right: rem(5px)
+  margin-bottom: rem(90px)
+
+  &:last-child
+    margin-bottom: 0
+
+  @media (max-width: 1030px)
+    width: 50%
+    margin-bottom: rem(110px)
+
+    &:nth-child(2n)
+      padding-right: 0
+
+  .base--mobile &
+    @media (max-width: 510px)
+      width: 100%
+      padding: 0
+
+  &:nth-child(4n)
+    padding-right: 0
+
+.home-stories__content
+  padding: rem(0 16px)
+
+.home-stories__img-wrapper
+  position: relative
+  display: block
+
+.home-stories__video-icon
+  position: absolute
+  bottom: rem(10px)
+  right: rem(20px)
+
+.home-stories__img
+  previewImage(rem(240px))
+  display: none
+  .base--mobile &
+    @media (max-width: 510px)
+      display: none
+
+.home-stories__img--mobile
+  display: block
+  width: 100%
+
+  .base--mobile &
+    @media (max-width: 510px)
+      display: block
+
+.home-stories__title
+  @extend $home-sections-title
+
+.home-stories__text
+  @extend $home-sections-text
+
+.home-stories__author
+  @extend $home-sections-bottom-text

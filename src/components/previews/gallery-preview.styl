@@ -1,0 +1,52 @@
+@import "../stylesheet-options"
+
+.gallery-preview
+  @extend $inline-block
+  width: (100 / 2)%
+  padding-right: rem(5px)
+  margin-bottom: rem(70px)
+
+  &:last-child
+    margin-bottom: 0
+
+  @media (max-width: 900px)
+    width: 100%
+    padding-right: 0
+    margin-bottom: rem(110px)
+
+  &:nth-child(2n)
+    padding-right: 0
+
+.gallery-preview__content
+  padding: rem(0 16px)
+
+.gallery-preview__img-wrapper
+  display: block
+  position: relative
+
+.gallery-preview__img
+  previewImage(rem(480px))
+
+  @media (max-width: 900px)
+    display: none
+
+.gallery-preview__img--mobile
+  display: none
+  width: 100%
+
+  @media (max-width: 900px)
+    display: block
+
+.gallery-preview__video-icon
+  position: absolute
+  bottom: rem(10px)
+  right: rem(20px)
+
+.gallery-preview__title
+  @extend $home-sections-title
+
+.gallery-preview__text
+  @extend $home-sections-text
+
+.gallery-preview__date
+  @extend $home-sections-bottom-text

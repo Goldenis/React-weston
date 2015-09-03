@@ -1,0 +1,67 @@
+@import "../stylesheet-options"
+
+.footer-wrapper
+  padding-top: rem(100px)
+  background: #fff
+  position: relative
+  z-index: 10
+
+  @media (max-width: 600px)
+    padding-top: rem(170px)
+
+.footer
+  /*position: absolute*/
+  /*bottom: 0*/
+  /*left: 0*/
+  /*width: 100%*/
+  padding: rem(40px)
+  background: #f1f1f1
+
+.footer__container
+  @extend $container
+
+.footer__copy
+  margin-top: rem(36px)
+  background: url('../images/WestonJamesPalmer.svg') no-repeat center
+  background-size: rem(180px)
+  color: #a2a4a8
+  height: rem(8px)
+
+.footer__subscribe
+  text-align: center
+  margin-top: rem(48px)
+
+.footer__subscribe-img
+  margin-bottom: rem(5px)
+
+.footer__subscribe-text
+  font-size: rem(15px)
+  color: #757474
+  margin-bottom: rem(15px)
+
+.footer__subscribe-input
+  font-size: rem(14px)
+  padding: rem(10px 8px)
+  box-shadow: inset rem(0 2px 4px) rgba(black, .15)
+  border: rem(1px) solid #ccc
+  border-radius: rem(4px)
+  background: #f5f5f5
+  margin-bottom: rem(20px)
+  min-width: rem(230px)
+
+  @media (max-width: 300px)
+    min-width: 0
+    width: 98%
+
+  &::placeholder
+    color: #cccccc
+
+.footer__subscribe-btn
+  font-family: 'SackersGothicW01-Medium', serif
+  font-size: rem(11px)
+  color: #4a4a4a
+  text-transform: uppercase
+  cursor: pointer
+  background: transparent
+  border: none
+  letter-spacing: rem(2px)

@@ -1,0 +1,21 @@
+@import "../stylesheet-options"
+
+.navigation
+  float: left
+  position: absolute
+  left: 50%
+  transform: translate(-50%, 0)
+
+.navigation__item
+  display: inline-block
+  margin: rem(0 50px)
+  font-size: rem(12px)
+  font-family: 'SackersGothicW01-Medium', serif
+  line-height: rem(48px)
+  color: #fff
+  text-decoration: none
+  text-transform: uppercase
+  -webkit-font-smoothing: initial
+
+  &.active
+    color: #b1b1b1

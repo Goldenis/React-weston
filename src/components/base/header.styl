@@ -1,0 +1,159 @@
+@import "../stylesheet-options"
+
+.header
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 9997
+  width: 100%
+  padding: rem(0 20px)
+  background: rgba(#000, .5)
+  white-space: nowrap
+  min-width: rem(860px)
+
+  .base--mobile &
+    min-width: 0
+
+.header__logo
+  float: left
+  margin-right: rem(28px)
+  background: url(../images/WJP.svg) no-repeat center
+  background-size: rem(64px 64px)
+  width: rem(64px)
+  height: rem(48px)
+  text-decoration: none
+
+.header__cart-widget-icon
+  background: url(../images/Shop.svg) no-repeat center
+  background-size: rem(18px 18px)
+  width: 18px
+  height: 48px
+  float: right
+  margin-left: rem(20px)
+  cursor: pointer
+
+.header__container
+  @extend $container
+  position: relative
+
+.header-mobile
+  height: rem(48px)
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 9998
+  display: none
+
+.header-mobile__top
+  position: relative
+  width: 100%
+  height: rem(48px)
+  background: rgba(#000, .5)
+
+.header-mobile__block
+  display: inline-block
+  vertical-align: middle
+  width: (100 / 3)%
+
+  &--logo
+    color: #fff
+    text-align: center
+    font-size: rem(23px)
+    background: url(../images/WJP.svg) no-repeat center center
+    background-size: rem(64px 64px)
+    height: rem(48px)
+    letter-spacing: rem(4px)
+    line-height: rem(48px)
+    text-decoration: none
+
+  &--toggle
+    position: relative
+    cursor: pointer
+    height: rem(12px)
+    padding-left: rem(15px)
+
+    &:before
+      content: ''
+      display: block
+      width: rem(20px)
+      height: rem(2px)
+      background: #fff
+      border-radius: rem(4px)
+      transition: transform .4s ease-out
+
+    &:after
+      content: ''
+      display: block
+      width: rem(20px)
+      height: rem(2px)
+      background: #fff
+      border-radius: rem(4px)
+      transform: translate(0, rem(8px))
+      transition: transform .4s ease-out
+
+  &--toggle-close
+
+    &:before
+      content: ''
+      display: block
+      width: rem(20px)
+      height: rem(2px)
+      background: #fff
+      border-radius: rem(4px)
+      transform: translate(0, rem(5px)) rotate(45deg)
+
+    &:after
+      content: ''
+      display: block
+      width: rem(20px)
+      height: rem(2px)
+      background: #fff
+      border-radius: rem(4px)
+      transform: translate(0, rem(3px)) rotate(-45deg)
+
+.header-mobile__search
+  float: right
+  padding-right: rem(15px)
+
+.header-mobile__nav
+  position: absolute
+  overflow: hidden
+  width: 100%
+  top: rem(48px)
+  height: 0
+  left: 0
+  visibility: hidden
+  transition: height .3s ease-out, visibility .3s
+
+  &--active
+    visibility: visible
+    height: 100%
+    transition: height .3s ease-out, visibility .05s
+
+.header-mobile__nav-scroll
+  width: 100%
+  padding-bottom: rem(8px)
+  white-space: nowrap
+  overflow: scroll
+  -webkit-overflow-scrolling: touch
+  background: rgba(black, .5)
+  border-top: rem(1px) solid rgba(255,255,255,0.2)
+
+.header-mobile__nav-item
+  color: #fff
+  display: inline-block
+  text-decoration: none
+  font-size: rem(12px)
+  font-family: 'SackersGothicW01-Medium', serif
+  margin: rem(0 18px)
+  line-height: rem(48px)
+  text-transform: uppercase
+  -webkit-font-smoothing: initial
+
+@media (max-width: 760px)
+  .base--mobile .header-mobile
+    display: block
+
+  .base--mobile .header
+    display: none

@@ -1,0 +1,46 @@
+@import "../stylesheet-options"
+
+.home__wrapper
+  position: relative
+  z-index: 3
+  background: #fff
+
+.home__logo
+  text-align: center
+  padding: rem(190px 15px 0)
+  margin-bottom: rem(147px)
+
+.home__last-tweet
+  margin-top: rem(20px)
+  margin-bottom: @margin-top
+  font-size: rem(20px)
+  font-family: 'IdealSans-ExtraLight', sans-serif
+  color: #767675
+  -webkit-font-smoothing: initial
+
+  a
+    color: darken(#767675, 10%)
+    text-decoration: none
+
+.home__last-tweet-icon
+  display: block
+  margin: auto
+  background: url('../images/twitter.svg') no-repeat center
+  width: rem(20px)
+  height: @width
+
+.home__sections
+  width: 100%
+  max-width: rem(1440px)
+  margin: auto
+  padding-top: rem(100px) 
+
+  &--tiny
+    max-width: rem(1260px)
+    padding: rem(0 20px)
+
+.home__instagram-feed-link
+  font-size: rem(22px)
+  margin-top: rem(42px)
+  color: #4a4a4a
+  text-align: center

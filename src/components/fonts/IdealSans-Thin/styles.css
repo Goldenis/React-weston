@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'IdealSans-Thin';
+  src: url('IdealSans-Thin.eot?#iefix') format('embedded-opentype'),  url('IdealSans-Thin.otf')  format('opentype'),
+	     url('IdealSans-Thin.woff') format('woff'), url('IdealSans-Thin.ttf')  format('truetype'), url('IdealSans-Thin.svg#IdealSans-Thin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

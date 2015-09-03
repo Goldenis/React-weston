@@ -1,0 +1,148 @@
+base-font-size = 16px
+
+rem(pixels)
+  rems = ()
+
+  for pixel in pixels
+    if pixel is 0 or pixel is auto
+      push(rems, pixel)
+    else
+      push(rems, (pixel / base-font-size)rem)
+
+  return rems
+
+
+max-container-width = rem(975px)
+
+$clearfix
+  &:before, &:after
+    display: table
+
+  &:after
+    clear: both
+
+$container
+  margin-left: auto
+  margin-right: @margin-left
+  max-width: max-container-width
+
+max-header-height = rem(48px)
+
+$inline-block
+  display: inline-block
+  vertical-align: top
+
+$home-sections-title
+  margin-top: rem(18px)
+  font-size: rem(20px)
+  color: #333332
+  text-decoration: none
+  display: block
+
+$home-sections-text
+  margin-top: rem(6px)
+  font-size: rem(19px)
+  color: #767675
+
+$home-sections-bottom-text
+  margin-top: rem(8px)
+  font-size: rem(14px)
+  font-weight: bold
+  color: #b3b3b1
+
+previewImage($height)
+  height: $height
+  overflow: hidden
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  transition: opacity .3s ease-out
+
+  &:hover
+    opacity: .7
+
+
+
+$single-page-title
+  margin: 0
+  font-size: rem(50px)
+  font-family: 'IdealSans-ExtraLight', sans-serif
+  font-weight: normal
+  color: #333336
+
+  @media (max-width: 768px)
+    font-size: rem(32px)
+
+$single-page-preview
+  margin: 0
+  font-size: rem(25px)
+  font-family: 'IdealSans-ExtraLight', sans-serif
+  font-weight: normal
+  color: #767675
+
+  @media (max-width: 768px)
+    font-size: rem(20px)
+
+$single-page-meta
+  font-size: rem(18px)
+  color: #b3b3b1
+
+$single-page-content
+  font-size: rem(21px)
+  font-family: 'FreightTextBook', sans-serif
+  line-height: rem(31px)
+  color: #333
+
+  @media (max-width: 768px)
+    font-size: rem(18px)
+    padding: rem(0 20px)
+
+  .post-img
+    max-width: 100%
+    margin-bottom: 0
+
+    img
+      display: block
+      padding: 0 rem(20px)
+      margin: auto
+
+    .img-fullscreen
+      padding: 0 !important
+
+  .caption
+    color: #b3b3b1
+    font-size: rem(18px)
+    display: block
+    max-width: rem(1080px)
+    margin: auto
+    margin-top: rem(12px)
+    padding: (0 40px)
+
+  a
+    color: inherit
+
+  > p
+    margin-top: rem(38px)
+    margin-bottom: rem(38px)
+    letter-spacing: rem(0.2px)
+    color: #333
+
+    &:first-child
+      margin-top: 0
+
+  ul
+    margin-top: 0
+
+  h1,h2,h3,h4,h5,h6
+    font-family: 'IdealSans-Light', sans-serif
+    font-weight: normal
+
+  h4,h5,h6
+    margin-bottom: 0
+
+  h3
+    font-size: rem(30px)
+    margin-bottom: rem(16px)
+
+  h4
+    font-size: rem(25px)

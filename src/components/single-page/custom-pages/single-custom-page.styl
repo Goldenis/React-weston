@@ -1,0 +1,22 @@
+@import "../../stylesheet-options.styl"
+
+.single-custom-page
+  max-width: rem(1000px)
+  margin: auto
+  padding: rem(0 20px)
+
+.single-custom-page__title
+  font-size: rem(55px)
+  color: #333336
+  font-family: 'IdealSans-ExtraLight', sans-serif
+  font-weight: normal
+  margin-top: 0
+
+  @media (max-width: 768px)
+    font-size: rem(35px)
+
+.single-custom-page__content
+  @extend $single-page-content
+
+  @media (max-width: 768px)
+    padding: 0

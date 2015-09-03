@@ -1,0 +1,61 @@
+@import "../stylesheet-options"
+
+.shop-page__nav
+  text-align: center
+  margin-bottom: rem(30px)
+
+.shop-page__nav-item
+  font-size: rem(11px)
+  font-family: 'SackersGothicW01-Medium', serif
+  color: #4a4a4a
+  margin: rem(0 30px)
+  display: inline-block
+  text-transform: uppercase
+  text-decoration: none
+
+  &.active
+    color: #767675
+
+.shop-page__content
+  max-width: rem(1220px)
+  margin: auto
+
+.shop-page-featured__item
+  @extend $inline-block
+  text-align: center
+  height: rem(400px)
+  width: 50%
+  
+  &:first-child
+    padding-right: rem(5px)
+    
+.shop-page-featured__item-text
+  display: block
+  width: 100%
+  height: 100%
+  background: #d9dbe3
+  text-decoration: none
+  color: #fff
+  font-size: rem(50px)
+  font-family: 'IdealSans-ExtraLight', sans-serif
+  line-height: rem(400px)
+
+.shop-page-category__item
+  @extend $inline-block
+  width: (100 / 3)%
+  padding-right: rem(5px)
+  margin-bottom: rem(50px)
+
+  &:nth-child(3n+3)
+    padding-right: 0
+
+.shop-page-category__item-image
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 100% auto
+  height: rem(270px)
+
+.shop-page-category__item-title
+  font-size: rem(20px)
+  color: #333332
+  margin-top: rem(20px)
